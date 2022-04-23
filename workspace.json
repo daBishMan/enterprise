@@ -1,4 +1,6 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "dotnet-api": "apps/dotnet/api"
+  }
 }
