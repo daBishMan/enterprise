@@ -4,11 +4,19 @@
   "overrides": [
     {
       "files": ["*.ts"],
+      // We set parserOptions.project for the project to allow TypeScript to create the
+      // type-checker behind the scenes when we run linting
+      "parserOptions": {
+        "project": ["apps/admin/tsconfig.*?.json"]
+      },
       "extends": [
         "plugin:@nrwl/nx/angular",
+        "plugin:ngrx/recommended",
+        "plugin:rxjs/recommended",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
+        "rxjs/no-ignored-subscription": "error",
         "@angular-eslint/directive-selector": [
           "error",
           {
