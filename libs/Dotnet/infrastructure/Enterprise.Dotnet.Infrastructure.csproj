@@ -3,9 +3,17 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+    <!-- <Nullable>enable</Nullable> -->
     <OutputPath>../../../dist/libs/dotnet/infrastructure</OutputPath>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="6.0.4"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\core\Enterprise.Dotnet.Core.csproj"/>
+  </ItemGroup>
 
   <Target Name="CheckNxModuleBoundaries" BeforeTargets="Build">
     <Exec Command="node ../../../node_modules/@nx-dotnet/core/src/tasks/check-module-boundaries.js -p dotnet-infrastructure"/>
