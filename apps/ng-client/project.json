@@ -6,9 +6,7 @@
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/ng-client",
         "index": "apps/ng-client/src/index.html",
@@ -16,13 +14,8 @@
         "polyfills": "apps/ng-client/src/polyfills.ts",
         "tsConfig": "apps/ng-client/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": [
-          "apps/ng-client/src/favicon.ico",
-          "apps/ng-client/src/assets"
-        ],
-        "styles": [
-          "apps/ng-client/src/styles.scss"
-        ],
+        "assets": ["apps/ng-client/src/favicon.ico", "apps/ng-client/src/assets"],
+        "styles": ["apps/ng-client/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -79,25 +72,17 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "apps/ng-client/**/*.ts",
-          "apps/ng-client/**/*.html"
-        ]
+        "lintFilePatterns": ["apps/ng-client/**/*.ts", "apps/ng-client/**/*.html"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/apps/ng-client"
-      ],
+      "outputs": ["coverage/apps/ng-client"],
       "options": {
         "jestConfig": "apps/ng-client/jest.config.ts",
         "passWithNoTests": true
       }
     }
   },
-  "tags": [
-    "angular",
-    "client"
-  ]
+  "tags": ["angular", "client"]
 }

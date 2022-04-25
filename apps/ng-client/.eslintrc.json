@@ -6,12 +6,24 @@
       "files": ["*.ts"],
       "extends": [
         "plugin:@nrwl/nx/angular",
-        "plugin:@angular-eslint/template/process-inline-templates"
+        "plugin:ngrx/recommended",
+        "plugin:rxjs/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        // Make sure prettier is the last rule so it can override the other rules
+        "plugin:prettier/recommended"
       ],
       "parserOptions": {
         "project": ["apps/ng-client/tsconfig.*?.json"]
       },
       "rules": {
+        // "prettier/prettier": "error", "arrow-body-style": "off", "prefer-arrow-callback": "off"
+        // Are needed for proper setting of prettier recommended rules
+        "prettier/prettier": "error",
+        "arrow-body-style": "off",
+        "prefer-arrow-callback": "off",
+
+        "rxjs/no-ignored-subscription": "error",
+
         "@angular-eslint/directive-selector": [
           "error",
           {
