@@ -1,4 +1,4 @@
-namespace Enterprise.Dotnet.Api;
+namespace Enterprise.Server.DotnetApi;
 
 public class WeatherForecast
 {

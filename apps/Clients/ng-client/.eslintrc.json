@@ -1,5 +1,5 @@
 {
-  "extends": ["../../.eslintrc.json"],
+  "extends": ["../../../.eslintrc.json"],
   "ignorePatterns": ["!**/*"],
   "overrides": [
     {
@@ -13,7 +13,7 @@
         "plugin:prettier/recommended"
       ],
       "parserOptions": {
-        "project": ["apps/ng-client/tsconfig.*?.json"]
+        "project": ["apps/clients/ng-client/tsconfig.*?.json"]
       },
       "rules": {
         // "prettier/prettier": "error", "arrow-body-style": "off", "prefer-arrow-callback": "off"

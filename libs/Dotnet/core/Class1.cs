@@ -1,4 +1,4 @@
-﻿namespace Enterprise.Dotnet.Core;
+namespace Enterprise.Dotnet.Core;
 public class Class1
 {
 

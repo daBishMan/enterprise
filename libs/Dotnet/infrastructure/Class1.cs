@@ -1,4 +1,4 @@
-﻿namespace Enterprise.Dotnet.Infrastructure;
+namespace Enterprise.Dotnet.Infrastructure;
 public class Class1
 {
 

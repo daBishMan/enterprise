@@ -1,21 +1,21 @@
 {
   "projectType": "application",
-  "root": "apps/ng-client",
-  "sourceRoot": "apps/ng-client/src",
+  "root": "apps/clients/ng-client",
+  "sourceRoot": "apps/clients/ng-client/src",
   "prefix": "ngx",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/ng-client",
-        "index": "apps/ng-client/src/index.html",
-        "main": "apps/ng-client/src/main.ts",
-        "polyfills": "apps/ng-client/src/polyfills.ts",
-        "tsConfig": "apps/ng-client/tsconfig.app.json",
+        "outputPath": "dist/apps/clients/ng-client",
+        "index": "apps/clients/ng-client/src/index.html",
+        "main": "apps/clients/ng-client/src/main.ts",
+        "polyfills": "apps/clients/ng-client/src/polyfills.ts",
+        "tsConfig": "apps/clients/ng-client/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/ng-client/src/favicon.ico", "apps/ng-client/src/assets"],
-        "styles": ["apps/ng-client/src/styles.scss"],
+        "assets": ["apps/clients/ng-client/src/favicon.ico", "apps/clients/ng-client/src/assets"],
+        "styles": ["apps/clients/ng-client/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -34,8 +34,8 @@
           ],
           "fileReplacements": [
             {
-              "replace": "apps/ng-client/src/environments/environment.ts",
-              "with": "apps/ng-client/src/environments/environment.prod.ts"
+              "replace": "apps/clients/ng-client/src/environments/environment.ts",
+              "with": "apps/clients/ng-client/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all"
@@ -72,14 +72,14 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/ng-client/**/*.ts", "apps/ng-client/**/*.html"]
+        "lintFilePatterns": ["apps/clients/ng-client/**/*.ts", "apps/clients/ng-client/**/*.html"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/ng-client"],
+      "outputs": ["coverage/apps/clients/ng-client"],
       "options": {
-        "jestConfig": "apps/ng-client/jest.config.ts",
+        "jestConfig": "apps/clients/ng-client/jest.config.ts",
         "passWithNoTests": true
       }
     }

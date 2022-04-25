@@ -5,7 +5,9 @@
   "targets": {
     "build": {
       "executor": "@nx-dotnet/core:build",
-      "outputs": ["dist/libs/dotnet/infrastructure"],
+      "outputs": [
+        "dist/libs/dotnet/infrastructure"
+      ],
       "options": {
         "configuration": "Debug",
         "noDependencies": true
@@ -20,5 +22,8 @@
       "executor": "@nx-dotnet/core:format"
     }
   },
-  "tags": ["dotnet", "infrastructure"]
+  "tags": [
+    "dotnet",
+    "infrastructure"
+  ]
 }
