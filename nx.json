@@ -30,7 +30,7 @@
       }
     ]
   },
-  "plugins": [],
+  "plugins": ["@nx-dotnet/core"],
   "generators": {
     "@nrwl/angular:application": {
       "style": "scss",
@@ -46,5 +46,6 @@
     "@nrwl/angular:component": {
       "style": "scss"
     }
-  }
+  },
+  "defaultProject": "ng-client"
 }

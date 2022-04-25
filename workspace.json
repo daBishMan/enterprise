@@ -1,8 +1,10 @@
 {
   "version": 2,
   "projects": {
+    "dotnet-api": "apps/dotnet/api",
+    "dotnet-core": "libs/dotnet/core",
+    "dotnet-infrastructure": "libs/dotnet/infrastructure",
     "ng-client": "apps/ng-client",
     "ng-client-e2e": "apps/ng-client-e2e"
-  },
-  "defaultProject": "ng-client"
+  }
 }

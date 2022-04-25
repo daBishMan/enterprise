@@ -7,7 +7,8 @@
     "build": "nx build",
     "test": "nx test",
     "lint": "nx lint",
-    "postinstall": "ngcc --properties es2015 browser module main"
+    "postinstall": "ngcc --properties es2015 browser module main",
+    "prepare": "nx g @nx-dotnet/core:restore"
   },
   "private": true,
   "dependencies": {
@@ -46,6 +47,7 @@
     "@nrwl/linter": "14.0.2",
     "@nrwl/nx-cloud": "latest",
     "@nrwl/workspace": "~14.0.2",
+    "@nx-dotnet/core": "~1.9.11",
     "@types/jest": "27.4.1",
     "@types/node": "17.0.26",
     "@typescript-eslint/eslint-plugin": "~5.20.0",
