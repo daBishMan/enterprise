@@ -1,7 +1,7 @@
 {
   "version": 2,
   "projects": {
-    "admin": "apps/admin",
-    "admin-e2e": "apps/admin-e2e"
+    "ng-client": "apps/ng-client",
+    "ng-client-e2e": "apps/ng-client-e2e"
   }
 }

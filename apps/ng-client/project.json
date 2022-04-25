@@ -1,21 +1,28 @@
 {
   "projectType": "application",
-  "root": "apps/admin",
-  "sourceRoot": "apps/admin/src",
-  "prefix": "xyz",
+  "root": "apps/ng-client",
+  "sourceRoot": "apps/ng-client/src",
+  "prefix": "ngx",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
-        "outputPath": "dist/apps/admin",
-        "index": "apps/admin/src/index.html",
-        "main": "apps/admin/src/main.ts",
-        "polyfills": "apps/admin/src/polyfills.ts",
-        "tsConfig": "apps/admin/tsconfig.app.json",
+        "outputPath": "dist/apps/ng-client",
+        "index": "apps/ng-client/src/index.html",
+        "main": "apps/ng-client/src/main.ts",
+        "polyfills": "apps/ng-client/src/polyfills.ts",
+        "tsConfig": "apps/ng-client/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/admin/src/favicon.ico", "apps/admin/src/assets"],
-        "styles": ["apps/admin/src/styles.scss"],
+        "assets": [
+          "apps/ng-client/src/favicon.ico",
+          "apps/ng-client/src/assets"
+        ],
+        "styles": [
+          "apps/ng-client/src/styles.scss"
+        ],
         "scripts": []
       },
       "configurations": {
@@ -34,8 +41,8 @@
           ],
           "fileReplacements": [
             {
-              "replace": "apps/admin/src/environments/environment.ts",
-              "with": "apps/admin/src/environments/environment.prod.ts"
+              "replace": "apps/ng-client/src/environments/environment.ts",
+              "with": "apps/ng-client/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all"
@@ -55,10 +62,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "admin:build:production"
+          "browserTarget": "ng-client:build:production"
         },
         "development": {
-          "browserTarget": "admin:build:development"
+          "browserTarget": "ng-client:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -66,23 +73,31 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "admin:build"
+        "browserTarget": "ng-client:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/admin/**/*.ts", "apps/admin/**/*.html"]
+        "lintFilePatterns": [
+          "apps/ng-client/**/*.ts",
+          "apps/ng-client/**/*.html"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/admin"],
+      "outputs": [
+        "coverage/apps/ng-client"
+      ],
       "options": {
-        "jestConfig": "apps/admin/jest.config.ts",
+        "jestConfig": "apps/ng-client/jest.config.ts",
         "passWithNoTests": true
       }
     }
   },
-  "tags": []
+  "tags": [
+    "angular",
+    "client"
+  ]
 }

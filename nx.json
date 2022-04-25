@@ -17,7 +17,10 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "cacheableOperations": ["test", "e2e"],
+        "cacheableOperations": [
+          "test",
+          "e2e"
+        ],
         "accessToken": "ODE4MGU0MzEtN2M5Yy00ZWE5LTg3ZTAtM2VhNTg2YWE4M2JkfHJlYWQtd3JpdGU="
       }
     }
@@ -45,6 +48,5 @@
     "@nrwl/angular:component": {
       "style": "scss"
     }
-  },
-  "defaultProject": "admin"
+  }
 }
