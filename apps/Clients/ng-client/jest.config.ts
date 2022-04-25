@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'ng-client',
+  displayName: 'Angular Client Tests',
   preset: '../../../jest.preset.ts',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
