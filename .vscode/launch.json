@@ -2,6 +2,27 @@
   "version": "0.2.0",
   "configurations": [
     {
+      "resolveSourceMapLocations": ["${workspaceFolder}/**", "!**/node_modules/**"],
+      "name": "Launch Chrome",
+      "request": "launch",
+      "type": "chrome",
+      "url": "http://localhost:4200",
+      "webRoot": "${workspaceFolder}/apps/Clients/"
+    },
+    // {
+    //   "name": "Attach to Chrome, with sourcemaps",
+    //   "type": "chrome",
+    //   "request": "attach",
+    //   "port": 9222,
+    //   "sourceMaps": true,
+    //   "webRoot": "${workspaceRoot}/src",
+    //   "url": "http://localhost:4200/",
+    //   "sourceMapPathOverrides": {
+    //     "webpack:///*": "/*"
+    //   }
+    // },
+
+    {
       // Use IntelliSense to find out which attributes exist for C# debugging
       // Use hover for the description of the existing attributes
       // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md

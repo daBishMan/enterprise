@@ -5,6 +5,7 @@ using Enterprise.Dotnet.API.Errors;
 using Enterprise.Dotnet.Core.Entities;
 using Enterprise.Dotnet.Core.Interfaces;
 using Enterprise.Dotnet.Core.Specifications;
+using Enterprise.Dotnet.API.Helpers;
 
 namespace Enterprise.Server.DotnetApi.Controllers;
 
@@ -28,13 +29,17 @@ public class ProductsController : BaseApiController
   }
 
   [HttpGet]
-  public async Task<ActionResult<IReadOnlyList<ProductToReturnDTO>>> GetProducts(
-    string sort, int? brandId, int? typeId)
+  public async Task<ActionResult<Pagination<ProductToReturnDTO>>> GetProducts(
+   [FromQuery] ProductSpecParams productParams)
   {
-    var spec = new ProductsWithTypesAndBrandsSpecification(sort, brandId, typeId);
-    var products = await this.productsRepo.ListAsync(spec);
+    var spec = new ProductsWithTypesAndBrandsSpecification(productParams);
+    var countSpec = new ProductWithFiltersForCountSpecification(productParams);
 
-    return Ok(this.mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDTO>>(products));
+    var products = await this.productsRepo.ListAsync(spec);
+    var totalItems = await this.productsRepo.CountAsync(countSpec);
+
+    var data = this.mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductToReturnDTO>>(products);
+    return Ok(new Pagination<ProductToReturnDTO>(productParams.PageIndex, productParams.PageSize, totalItems, data));
   }
 
   [HttpGet("{id}")]
