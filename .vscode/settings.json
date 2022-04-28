@@ -26,5 +26,12 @@
     "titleBar.border": "#42b883",
     "titleBar.inactiveBackground": "#42b88399",
     "titleBar.inactiveForeground": "#15202b99"
+  },
+
+  "files.exclude": {
+    "**/*.db-shm": true,
+    "**/*.db-wal": true,
+    "**/appsettings*.json": true,
+    "**/Properties/": true
   }
 }
