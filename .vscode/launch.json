@@ -2,14 +2,20 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "resolveSourceMapLocations": ["${workspaceFolder}/**", "!**/node_modules/**"],
-      "name": "Launch Chrome",
+      "name": "Launch Edge",
       "request": "launch",
-      "type": "chrome",
+      "type": "pwa-msedge",
       "url": "http://localhost:4200",
-      "webRoot": "${workspaceFolder}/apps/Clients/"
+      "webRoot": "${workspaceFolder}"
     },
     // {
+    //   "name": "Launch Chrome",
+    //   "request": "launch",
+    //   "type": "chrome",
+    //   "url": "http://localhost:4200",
+    //   "webRoot": "${workspaceFolder}"
+    // },
+    // // {
     //   "name": "Attach to Chrome, with sourcemaps",
     //   "type": "chrome",
     //   "request": "attach",
